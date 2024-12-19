@@ -33,6 +33,28 @@ fnm use
 nvm use
 ```
 
+### API Client Generation
+
+The frontend uses a TypeScript client generated from the backend's OpenAPI specification. The client code is auto-generated and not committed to the repository. To generate the client:
+
+1. Ensure the OpenAPI specification is up to date:
+   ```bash
+   # Copy the latest OpenAPI spec from the backend
+   cp ../backend/openapi.json .
+   ```
+
+2. Generate the TypeScript client:
+   ```bash
+   npm run generate-client
+   ```
+
+This will create the API client in `src/client/`. The generated code includes:
+- Type definitions for all API models
+- API client with typed methods for all endpoints
+- Request/response handling utilities
+
+The client is automatically regenerated during the build process, but you may need to run it manually if you update the OpenAPI specification.
+
 * Within the `frontend` directory, install the necessary NPM packages:
 
 ```bash

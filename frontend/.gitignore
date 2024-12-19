@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 openapi.json
+src/client
 
 # Editor directories and files
 .vscode/*
